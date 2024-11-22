@@ -1,0 +1,80 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image: url('Screenshot 2023-10-04 123853.png'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            padding-top: 10px; /* Adjust as needed */
+        }
+		p{
+			text-align: right;
+            color:purple;
+            padding-top: 50px; /* Adjust as needed */
+
+		}
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            background-color: #333; /* Background color for the navigation bar */
+        }
+
+        ul.navbar li {
+            display: inline;
+            margin: 10px;
+        }
+
+        ul.navbar li a {
+            text-decoration: none;
+            color: #fff; /* Text color for regular links */
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #007BFF; /* Background color on hover */
+            color: #fff; /* Text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Online Voting System</h2>
+	
+    <ul class="navbar">
+		<li><a href="home.html">Home</a></li>
+        <li><a href="sp/registration.html">User Registration</a></li>
+       
+        <li><a href="Admin/adminlogin.php">Admin Login</a></li>
+        
+        
+    </ul>
+	<left>
+	<p><h1> Your vote is your voice</h1></p>
+	</left>
+</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    
+    
+    .navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    }
+    nav{
+    flex: 1;
+    text-align:right;
+    }
+    nav ul{
+    display: inline-block;
+   
+    }
+    nav ul li{
+    display: inline-block;
+    margin-right:20px;
+    
+    }
+    
+        
+    a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    }
+    
+    .navigation{
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+        }
+    .row{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    }
+   
+    
+    .col h1{
+        font-size: 50px;
+        line-height: 50px;
+        margin: 10px 0;
+        }
+    .button{
+    display: inline-block;
+    background-color:lightskyblue;
+    color:red;
+    padding: 10px 30px;
+    margin: 30px 0;
+    border-radius: 40px;
+    transition: 0.5s;
+    }
+    .button:hover{
+    background: yellowgreen;
+    }
+    
+    
+   
+    .item-col{
+        flex-basis: 80%;
+         
+        }
+        .item-col 
+   img{
+    max-width: 100%; 
+    padding-bottom: 30px;
+    margin-right: 50px;
+    }
+    
+    
+    h2{
+    text-align: center;
+    margin-bottom: 10%;
+    position: relative;
+    color: black;
+    }
+   
+    .fp-col:hover{
+    transform: translate(-10px,-10px);
+    background-color: yellowgreen;
+    }
+    
+    
+    
+    .col .votes-img{
+    padding: 30px;
+    
+    }
+    

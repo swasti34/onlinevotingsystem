@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Online voting system-registration</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+       
+    </head>
+    <body>
+        <style>
+            body {
+            background-image: url('Screenshot 2023-10-07 185001.png'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+       
+             
+        
+            
+            #address{
+                width: 15%;
+                border-radius: 5px;
+                padding: 10px;
+
+
+            }
+
+            #image{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+                
+
+            }
+            #role{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+                
+
+            }
+            #role select{
+                border-radius: 5px;
+                padding: 10px;
+                
+
+            }
+           
+        </style>
+        <center>
+            
+
+        <div id="headersection">
+        <h1> Online voting system</h1>
+        </div>
+        <hr>
+        <div id="bodysection">
+        <h3>Registration</h3>
+        
+       
+      
+        <form action="../API/register.php" method="POST" enctype="multipart/form-data">
+           
+            <input type="text" name="name" placeholder="Enter your name " required>
+            <input type="number" name="mobile" placeholder="enter your mobile number"required><br><br>
+            <input id="address" type="text" name="address" placeholder="address " required>
+            <input type="number" name="voterid" placeholder="Enter your voter_id " required><br><br>
+          
+            <input type="password" name="password" placeholder="Enter your password " required>
+            <input type="password" name="cpassword" placeholder="Confirm password " required><br><br>
+            
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="birth" name="birth" required>
+            
+        
+       
+
+        <br><br>
+
+            
+          
+
+          <div id="image">
+
+          Upload user image: <input type="file" name="photo">
+        </div><br>
+        <div id="image">
+            Upload voter card : <input type="file" name="vphoto">
+        </div><br>
+
+        
+        
+          
+          
+            <div id="role">
+           Select your role: <select name="role" required>
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select>
+            </div>
+            <br><br>
+            <button style=" padding: 10px;
+            border-radius: 5px;
+            width: 10%;
+            background-color:blue;
+          color: aliceblue;">Register</button><br><br>
+
+            Already user?<a href="../index.html"><b>Login</b></a>
+            
+            
+        </form>  
+        </div>
+        
+    
+        
+        
+        </center>
+       
+        <script>  function validateForm() {
+                    var number = document.getElementById("number").value;
+                    var numberpattern = /^[0-9]{10}$/;
+                
+                    // Check if the submit button is not the "Check" button
+                    if (document.activeElement.type !== 'submit' || document.activeElement.id !== 'checkbtn') {
+                        if (!number.match(numberpattern)) {
+                            alert("Number should be of 10 digits.");
+                            return false;
+                        }
+                    }
+                }
+        
+            </script>
+        </html>
+    </body>
+</html>

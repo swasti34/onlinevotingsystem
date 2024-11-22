@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Online voting system </title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            body {
+               background-image: url('Screenshot 2023-10-11 181552.png'); 
+               background-size: cover;
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+            
+               font-family: Arial, sans-serif;
+               margin: 0;
+               padding: 0;
+           }
+           h1{
+            padding: 15px; border: none; background-color: white; cursor: pointer;
+            
+           }
+           h2{
+	
+	color:black; /* You can change this color value to your desired color */
+
+background-size:contain;
+           }
+       </style> 
+        <body>
+            <right>
+            <div id="headersection">
+            <h1>Online voting system </h1>
+            </div>
+            <hr>
+            <div id="bodysection">
+            <form action="API/login.php" method="POST" id="log" onsubmit="return validateForm()">
+                <h2>Login</h2>
+                
+               
+                <input type="number" name="mobile" id="number" placeholder="Enter your mobile number "required><br><br>
+                <input type="password" name="password" placeholder="enter your password" required><br><br>
+                
+               
+            <input type="numberid" name="voterid" placeholder="Enter your voter_id " required><br><br>
+          
+                <select id="dropbox" name="role">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+                </select><br><br>
+                
+                <button id="loginbtn" type="submit"<button style="padding: 10px;
+                border-radius: 5px;
+                width: 10%;
+                background-color: blue;
+                color: aliceblue;">Login</button><br><br>
+                <!-- Add a new button to check.php -->
+
+            New user?<a href="sp/registration.html"><b>Register here</b></a><br><br>
+            Check Registration?<a href="sp/check.php"><b>Check here</b></a><br><br>
+<a href="Admin/adminlogin.php"><b>Admin login</b></a>
+           
+            
+            </form>
+            </div>
+        </right>
+             
+                <script>  function validateForm() {
+                    var number = document.getElementById("number").value;
+                    var numberpattern = /^[0-9]{10}$/;
+                
+                    // Check if the submit button is not the "Check" button
+                    if (document.activeElement.type !== 'submit' || document.activeElement.id !== 'checkbtn') {
+                        if (!number.match(numberpattern)) {
+                            alert("Number should be of 10 digits.");
+                            return false;
+                        }
+                    }
+                }
+                
+            
+                </script>
+
+        
+            
+        </body>
+        <br>
+        <br>
+        
+
+</html>
+
